@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass', '~> 3.3.4.1'
 gem 'simple_form', '~> 3.1.0'
 gem 'haml', '~> 4.0.6'
+gem 'haml-rails', '~> 0.9.0'
 gem 'active_model_serializers', '~> 0.9.3'
 
 
