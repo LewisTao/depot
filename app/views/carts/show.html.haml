@@ -1,10 +1,18 @@
-%center
-	%h2 Your Pragmatic Cart
+%h2 Your Cart
 
-%ul.list-unstyled
+%table.table.table-striped
 	- @cart.line_items.each do |item|
-		%li= item.product.title
+		%tr
+			%td #{item.quantity} &times;
+			%td= item.product.title
+			%td.item_price= number_to_currency(item.total_price)
+		%tr.total_line
+			%td{colspan: 2} 
+				%h4 Total
+			%td.total_cell
+				%h4= number_to_currency(@cart.total_price)
 
-= link_to 'Edit', edit_cart_path(@cart)
+= button_to "Empty cart", @cart, method: :delete, confimr: 'Are you sure?', class: 'btn btn-default'
+= link_to 'Edit', edit_cart_path(@cart), class: 'btn btn-default'
 \|
-= link_to 'Back', carts_path
+= link_to 'Back', carts_path, class: 'btn btn-default'

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CartsControllerTest < ActionController::TestCase
   setup do
-    @cart = carts(:one)
+    @cart = carts(:ruby)
   end
 
   test "should get index" do
@@ -41,6 +41,7 @@ class CartsControllerTest < ActionController::TestCase
 
   test "should destroy cart" do
     assert_difference('Cart.count', -1) do
+      session[:cart_id] = @cart.id
       delete :destroy, id: @cart
     end
 
