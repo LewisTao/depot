@@ -1,5 +1,9 @@
-%p#notice= notice
+%center
+	%h2 Your Pragmatic Cart
 
+%ul.list-unstyled
+	- @cart.line_items.each do |item|
+		%li= item.product.title
 
 = link_to 'Edit', edit_cart_path(@cart)
 \|

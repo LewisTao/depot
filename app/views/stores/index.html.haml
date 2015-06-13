@@ -10,5 +10,7 @@
 			%h3= link_to product.title, product
 			= product.description
 			.price_line
-				%span.price= product.price
+				%h4 
+					Price:
+					%span.price $#{product.price}
 				= button_to 'Add to Cart', line_items_path(product_id: product.id), class: 'btn btn-default'
