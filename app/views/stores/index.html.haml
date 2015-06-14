@@ -1,8 +1,8 @@
 %center
 	%h1 Your Pragmatic Catalog
 
-.row
-	- @products.each do |product|
+- @products.each do |product|
+	.row
 		.col-md-3
 			.thumbnail
 				= image_tag(product.image_url)

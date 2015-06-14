@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders
   root 'stores#index'
 
   resources :line_items

@@ -17,6 +17,9 @@
 @import "bootstrap";
 
 /*Header*/
+.body {
+	height: 678px;
+}
 .header {
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -40,5 +43,8 @@
 	padding-bottom: 5px;
 	.table > tbody > tr > td {
 		border-top: none;
+	}
+	.container-fluid {
+		height: 678px;
 	}
 }

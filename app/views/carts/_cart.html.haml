@@ -1,4 +1,12 @@
 %table.table
 	= render(@cart.line_items)
+	%tr.total_line
+	%td{colspan: 2} 
+		%h4 Total
+	%td.total_cell
+		%h4= number_to_currency(@cart.total_price)
+		
 
-= button_to "Empty cart", @cart, method: :delete, confimr: 'Are you sure?', class: 'btn btn-primary'
+
+= button_to "Check Out", new_order_path, method: :get, class: 'btn btn-primary'
+= button_to "Empty cart", @cart, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-primary'
