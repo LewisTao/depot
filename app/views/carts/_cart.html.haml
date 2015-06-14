@@ -1,0 +1,4 @@
+%table.table
+	= render(@cart.line_items)
+
+= button_to "Empty cart", @cart, method: :delete, confimr: 'Are you sure?', class: 'btn btn-primary'

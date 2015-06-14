@@ -17,7 +17,7 @@
 @import "bootstrap";
 
 /*Header*/
-.container-fluid {
+.header {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	.navbar-header {
@@ -27,5 +27,18 @@
 			text-align: center;
 			position: absolute;
 		}
+	}
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.border {
+	background-color: #999;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 5px;
+	.table > tbody > tr > td {
+		border-top: none;
 	}
 }
