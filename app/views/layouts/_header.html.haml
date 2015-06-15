@@ -8,9 +8,13 @@
 				%span.icon-bar
 			.navbar-brand.center Pragmatic Bookshelf
 		#bs-example-navbar-collapse-1.collapse.navbar-collapse
-			%ul.nav.navbar-nav
+			%ul.nav.navbar-nav.navbar-left
 				%li= link_to 'Home'
 				%li= link_to 'Questions'
 				%li= link_to 'News'
 				%li= link_to 'Contact'
-				
+			- if session[:user_id]
+				%ul.nav.navbar-nav.navbar-right
+					%li= link_to 'Orders', orders_path
+					%li= link_to 'Products', products_path
+					%li= link_to 'User', users_path

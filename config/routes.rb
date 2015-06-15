@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'admin' => 'admin#index'
+
+  get '/login' => 'sessions#new'
+
+  resources :sessions, only: [:new, :create, :destroy]
+
+  resources :users
   resources :orders
   root 'stores#index'
 
