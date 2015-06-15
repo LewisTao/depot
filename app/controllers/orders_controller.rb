@@ -38,6 +38,7 @@ class OrdersController < ApplicationController
         Cart.delete(session[:cart_id])
         session[:cart_id] = nil
         flash[:success] = 'Thank you for your order' 
+        OrderNotifier.received(@order).deliver
         format.html { redirect_to root_path}
         format.json { render :show, status: :created, location: @order }
       else
