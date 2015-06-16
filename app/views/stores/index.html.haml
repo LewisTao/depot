@@ -1,0 +1,16 @@
+%center
+	%h1 Your Pragmatic Catalog
+
+- @products.each do |product|
+	.row
+		.col-md-3
+			.thumbnail
+				= image_tag(product.image_url)
+		.col-md-9
+			%h3= link_to product.title, product
+			= product.description
+			.price_line
+				%h4 
+					Price:
+					%span.price $#{product.price}
+				= button_to 'Add to Cart', line_items_path(product_id: product.id), class: 'btn btn-default'

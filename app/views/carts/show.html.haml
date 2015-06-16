@@ -1,0 +1,7 @@
+%h2 Your Cart
+
+= render(@cart)
+
+
+= link_to 'Edit', edit_cart_path(@cart), class: 'btn btn-default'
+= link_to 'Back', carts_path, class: 'btn btn-default'

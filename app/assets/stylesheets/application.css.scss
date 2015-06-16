@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/*Header*/
+.body {
+	height: 678px;
+}
+.header {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	.navbar-header {
+		.center {
+			font-size: 25px;
+			width: 100%;
+			text-align: center;
+			position: absolute;
+		}
+	}
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.border {
+	background-color: #999;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 5px;
+	.table > tbody > tr > td {
+		border-top: none;
+	}
+	.container-fluid {
+		height: 678px;
+	}
+}
+
+.custom {
+	margin-top: 10px;
+	font-size: 15px;
+}
